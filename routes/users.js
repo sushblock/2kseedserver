@@ -1,7 +1,7 @@
 const express = require('express')
 router = express.Router()
 const { users } = require('../models')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 
 //This is to generate session token
 const { sign } = require('jsonwebtoken')

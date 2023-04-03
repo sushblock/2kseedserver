@@ -11,6 +11,9 @@ const cors = require('cors')
 app.use(express.json())
 app.use(cors())  //fix cors origin issue
 
+//require dotenv to configure ENV variables
+require("dotenv").config()
+
 //import data model
 const db = require('./models')
 
@@ -33,10 +36,12 @@ app.use('/likes', likesRouter)
 //After sequelize new folders like models/migrations/scripts gets created.
 
 db.sequelize.sync().then(() => {
-    app.listen(3002, () => {
+    app.listen(process.env.PORT || 3002, () => {
         console.log("App running on port 3002")
     });
-});
+}).catch(err => {
+    console.log(err)
+})
 
 
 
