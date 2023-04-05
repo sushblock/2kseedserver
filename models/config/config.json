@@ -1,0 +1,24 @@
+{
+    "development" :{
+        "username": "root",
+        "password": "gTGPMKK@#$2304",
+        "database": "2kseeddb",
+        "host": "localhost",
+        "dialect": "mysql"
+    },
+    "test" :{
+        "username": "root",
+        "password": "gTGPMKK@#$2304",
+        "database": "2kseeddb",
+        "host": "localhost",
+        "dialect": "mysql"
+    },
+    "production" :{
+        "username": "seeddbserver",
+        "password": "gTGPMKK@#$2304",
+        "database": "kseeddb",
+        "host": "2kseeddb.mysql.database.azure.com",
+        "dialect": "mysql"
+        
+    }
+}
